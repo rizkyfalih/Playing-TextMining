@@ -7,6 +7,7 @@ Created on Tue Apr  3 23:35:08 2018
 
 # Importing the libraries
 import pandas as pd
+from pandas import DataFrame
 import re
 
 # Importing nltk libraries
