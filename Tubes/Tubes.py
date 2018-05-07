@@ -22,6 +22,7 @@ from sklearn.feature_extraction.text import CountVectorizer
 from sklearn.naive_bayes import MultinomialNB
 from sklearn.metrics import accuracy_score
 from sklearn.naive_bayes import GaussianNB
+from sklearn.metrics import f1_score
 
 def label_to_binary(data):
     for i in data.index:
@@ -100,6 +101,7 @@ y_pred1 = classifier1.predict(X_test)
 
 accuracy1 = accuracy_score(y_test, y_pred1) * 100
 print("Accuracy Multinomial = " + str(accuracy1))
+print("F1 Score Multinomial = " + str(f1_score(y_test,y_pred1)))
 
 # Classifier Naive Bayes
 classifier2 = GaussianNB()
@@ -108,3 +110,4 @@ y_pred2 = classifier2.predict(X_test)
 
 accuracy2 = accuracy_score(y_test, y_pred2) * 100
 print("Accuracy Naive Bayes = " + str(accuracy2))
+print("F1 Score Naive Bayes = " + str(f1_score(y_test,y_pred2)))
